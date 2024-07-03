@@ -41,13 +41,13 @@ def check_prizes(lottery_number: str, prize_numbers: pd.DataFrame) -> list:
 
     return prizes_won
 
-def prize_report(lottery_number,prize_data: pd.DataFrame,):
-    
-    prizes_won = check_prizes(lottery_number,prize_data)
+def prize_report(lottery_number, prize_data: pd.DataFrame) -> str:
+    prizes_won = check_prizes(lottery_number, prize_data)
 
     if prizes_won:
-        print(f"Congratulations! You won the following prizes:")
-        for prize in prizes_won:
-            print(f"- {prize}")
+        result = "Congratulations! You won the following prizes:\n"
+        result += "\n".join([f"- {prize}" for prize in prizes_won])
     else:
-        print("May you be lucky next time")
+        result = "May you be lucky next time"
+
+    return result
