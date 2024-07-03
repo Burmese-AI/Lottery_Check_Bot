@@ -1,5 +1,5 @@
 requests
-asyncio
+python-telegram-bot
 aiogram
 numpy
 pandas
