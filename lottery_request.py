@@ -61,8 +61,4 @@ def request_lottery_number(url: str, date: str) -> pd.DataFrame:
         print(f"An error occurred: {e}")
         return pd.DataFrame()  # Return an empty DataFrame on error
 
-# Example usage
-url = "https://thai-lottery1.p.rapidapi.com/index3"
-date = "01072024"
-df = request_lottery_number(url, date)
-print(df)
+
